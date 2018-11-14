@@ -1,0 +1,12 @@
+version: '3'
+services:
+  psql:
+    build: ./sql
+    image: psql_test
+    container_name: psql_test
+    ports:
+    - 5432:5432
+    environment:
+     - POSTGRES_PASSWORD=darka
+     - POSTGRES_DB=darka
+     - POSTGRES_USER=darka
